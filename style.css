@@ -1,0 +1,443 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Baskerville Old Face',Poppins, sans-serif;
+    
+}
+
+.header
+{
+    min-height: 100vh;
+    width: 100%;
+    background-image:linear-gradient(rgba(34, 24, 3, 0.7), rgba(34, 24, 3, 0.7)), url('Banners/banner.jpg'); 
+    background-position: center;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+nav
+{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img
+{
+    width: 150px;
+}
+
+.nav-links 
+{
+    flex: 1;
+    text-align:right ;
+}
+
+.nav-links ul li
+{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a 
+{
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.nav-links ul li::after
+{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f4a236;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after
+{
+    width: 100%;
+}
+
+.text-box
+{
+    width: 90%;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.text-box h1
+{
+    font-size: 62px;
+    color:papayawhip;
+    padding-top: 10%;
+}
+
+.text-box p
+{
+    margin: 10px, 0px, 40px;
+    font-size: 14px;
+    color: white;
+}
+
+.hero-btn
+{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    padding: 14px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.hero-btn:hover
+{
+    border: 1px solid orange;
+    background:orange;
+    transition: 1s;
+}
+
+nav .fas
+{
+    display: none;
+}
+
+@media (max-width:700px){
+    .text-box h1
+    {
+        font-size: 20px;
+    }
+    
+    .nav-links ul li
+    {
+        display: block;
+    }
+
+    .nav-links
+    {
+        position: absolute;
+        background: orange;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+
+    nav .fas
+    {
+        display: block;
+        color: white;
+        margin: 10px;
+        font-size: 42px;
+        cursor: pointer;
+        transition: 1s;
+    }
+
+    .nav-links ul
+    {
+        padding: 30px;
+    }
+}
+
+/* brands */
+
+.brands
+{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100;
+}
+
+h1
+{
+    font-size: 55px;
+    font-weight: 100;
+    color:brown
+}
+
+p
+{
+    color: grey;
+    font-size: 26px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+    padding-bottom: 40px;
+}
+
+.images
+{
+    display: flex;
+    padding: 10px;
+    padding-bottom: 30px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.images img
+{
+    margin: 10px;
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.514);
+}
+
+/* buissness hours */
+
+.hours
+{
+    
+    min-height: 100vh;
+    width: 100%;
+    background-image:url('Banners/banner1.jpg'); 
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    background-repeat: no-repeat;
+
+}
+
+.hours h1
+{
+    font-size: 47px;
+    padding-top: 266px;
+    color:rgb(255, 255, 163);
+    text-align: center;
+}
+
+.hours ul
+{
+    text-align: center;
+    color:cornsilk;
+
+}
+
+
+
+/* gallery */
+
+.gallery
+{
+    background-color:seashell;
+    padding-bottom: none;
+}
+.gallery h1
+{
+    padding-top: 40px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 100;
+    color: brown;
+}
+
+.gallery-images
+{
+   flex-basis: 32%;
+   border-radius: 10px;
+   margin-bottom: 10px;
+   position: relative;
+   overflow: hidden;
+   size: 30px;
+}
+
+.gallery-images img
+{
+    max-width: 40%;
+    margin: 0 auto;
+    padding-left: 5%;
+    padding-top: 10px;
+    justify-content:space-around;
+    /*box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.514);*/
+}
+
+.gallery-images img:hover
+{
+    padding-right: 5%;
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.514);
+    transition: 2s;
+}
+
+@media (max-width:700px)
+{
+    .gallery h1
+    {
+        text-align: center;
+        font-size: 40px;
+    }
+
+    .gallery-images img 
+    {
+        max-width: 20%;
+        padding-left: 18%;
+        justify-content: space-around;
+    }
+
+    .gallery-images img:hover
+{
+    padding-right: 12%;
+    box-shadow: 0px 10px 50px rgb(212, 44, 44);
+    transition: 2s;
+}
+}
+
+/* location */
+
+.location
+{
+    background-image:url('Banners/location.jpg');
+    background-color: transparent; 
+    min-height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.location h1
+{
+    text-align: center;
+    font-size: 45px;
+    color: white;
+    padding-top: 140px;
+
+}
+
+@media (max-width:700px) 
+{
+    .location 
+    {
+        width: 120%
+    }
+
+    .location h1
+    {
+        padding-right: 20%;
+    }
+
+}
+
+.direction-btn
+{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    border: 4px solid white;
+    padding: 14px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    
+}
+
+.direction-btn:hover
+{
+    border: 8px solid black;
+    background: black;
+    transition: 1s;
+}
+
+/* contact us */
+
+.contact
+{
+    background-color:snow;
+    padding-top: 10px;
+}
+
+.contact h1
+{
+    text-align: center;
+    color: brown;
+}
+
+.contact p
+{
+    text-align: center;
+    color: rgb(255, 82, 82);
+    font-size: 24px;
+    
+}
+
+.contact .phone
+{
+    text-align: center;
+    color: brown;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.phone p
+{
+    font-size: 20px;
+    text-decoration: none;
+    color: rgb(212, 44, 44);
+}
+
+.phone p a
+{
+    text-decoration: none;
+    color: rgb(212, 44, 44);
+}
+
+.social
+{
+    text-align: center;
+}
+
+/* FOOTER */
+
+#footer {
+    clear: left; /* cannot float on left */
+    width: 100%;
+    background: black;
+    color: white;
+    font-family: arial;
+    text-align: center;
+    padding: 0px;
+}
+
+#footer p
+{
+    color:blanchedalmond;
+}
+
+#footer a 
+{
+    text-decoration: none;
+    color: white;
+}
+
+#footer a::after
+{
+    content: '';
+    width: 0%;
+    height: 4px;
+    background:beige;
+    display: block;
+    margin: auto;
+    transition: 1s;
+}
+
+#footer a:hover::after
+{
+    width: 45%;
+    
+}
